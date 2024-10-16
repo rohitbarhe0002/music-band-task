@@ -1,0 +1,15 @@
+.bands-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+}
+
+.no-bands {
+  color: #ff7f50;
+  font-size: 1.2em;
+  text-align: center;
+  padding: 20px;
+}

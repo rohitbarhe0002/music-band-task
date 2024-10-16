@@ -1,17 +1,40 @@
 .band-item {
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  margin-bottom: 10px;
-  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 128, 128, 0.15);
+  margin: 12px 0;
+  padding: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  border: 2px solid #dff2f1;
 }
 
-.band-item h3 {
+.band-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0, 128, 128, 0.25);
+  border-color: #ffa69e;
+}
+
+.band-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.band-name {
+  font-size: 1.6em;
+  color: #074f57;
   margin: 0;
-  font-size: 1.2em;
+  text-transform: uppercase;
 }
 
-.band-item p {
-  margin: 5px 0;
-  color: #666;
+.band-detail {
+  font-size: 1em;
+  color: #555;
+}
+
+.band-detail strong {
+  color: #ff7f50;
 }

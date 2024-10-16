@@ -1,6 +1,5 @@
-// components/BandsList.js
 import React from 'react';
-import BandItem from '../BandItem/BandItem';
+import BandItem from "../BandItem/BandItem";
 import './BandsList.css';
 
 const BandsList = ({ bands }) => {
@@ -11,7 +10,7 @@ const BandsList = ({ bands }) => {
           <BandItem key={band.id} band={band} />
         ))
       ) : (
-        <p>No bands found for the selected location.</p>
+        <p className="no-bands">No bands found for the selected location.</p>
       )}
     </div>
   );

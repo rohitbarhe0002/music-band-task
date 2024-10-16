@@ -1,9 +1,8 @@
 
 import React, { useState, useEffect } from 'react';
-import useLocation from '../../hooks/useLocation';
-import useDebounce from '../../hooks/useDebounce';
-import { fetchBandsByCity } from '../../api/musicBrainzApi'; 
-import SearchBar from '../Search/SearchBar';
+import useLocation from "../../hooks/useLocation"
+import useDebounce from "../../hooks/useDebounce"
+import { fetchBandsByCity } from '../../api/musicBrainzApi';
 import BandsList from '../BandList/BandList';
 import './LocationDisplay.css';
 
@@ -11,7 +10,6 @@ const LocationDisplay = () => {
   const [city, setCity] = useState('');
   const [bands, setBands] = useState([]);
   const location = useLocation();
-  
   const debouncedCity = useDebounce(city, 500);
 
   useEffect(() => {
@@ -39,7 +37,21 @@ const LocationDisplay = () => {
   return (
     <div className="location-container">
       <h2 className="location-title">Find Music Bands</h2>
-      <SearchBar city={city} setCity={setCity} handleSearch={handleSearch} />
+      <p className="location-subtitle">Discover bands based on your location or search by city.</p>
+
+      <div className="location-details">
+        <input
+          type="text"
+          value={city}
+          placeholder={location?.city || 'Enter a city'}
+          onChange={(e) => setCity(e.target.value)}
+          className="city-input"
+        />
+        <button onClick={() => handleSearch(city)} className="search-button">
+          Search Bands
+        </button>
+      </div>
+
       <BandsList bands={bands} />
     </div>
   );
