@@ -1,0 +1,17 @@
+.band-item {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+}
+
+.band-item h3 {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.band-item p {
+  margin: 5px 0;
+  color: #666;
+}
